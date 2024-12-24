@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    {% if current_user %}<h1>Привет, {{ current_user.username }}</h1>{% endif %}
+    {% if not current_user %}<h1>Привет</h1>{% endif %}
+    <a href="/signup">Зарегистрироваться</a>
+    <a href="/signin">Войти</a>
+{% endblock %}
